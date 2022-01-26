@@ -24,6 +24,7 @@ const endTest = () => {
     let displaymsg = "Your typing speed is " + speed + "words per minute.";
     displaymsg += compare(message.innerText, totalStr);
     message.innerText = displaymsg;
+    typedWords.value = '';
 }
 
 const compare = (text1, text2) => {
