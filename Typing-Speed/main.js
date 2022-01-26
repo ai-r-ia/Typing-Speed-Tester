@@ -30,13 +30,17 @@ const compare = (text1, text2) => {
     let words1 = text1.split(" ");
     let words2 = text2.split(" ");
     let count = 0;
+    let nullCount = 0;
     words1.forEach(function (item, index) {
         if (item == words2[index]) {
             count++;
         }
-        let errors = (words1.length - count);
-        return (count + "correctly typed out of" + words1.length + "words and the total number of errors made are" + errors + ".");
+        if (words2[index] == null) {
+            nullCount++;
+        }
     })
+    let errors = (words1.length - (nullCount + count));
+    return (" " + count + " words were correctly typed out of " + words1.length + " words and the total number of errors made are " + errors + ".");
 }
 
 const wordCounter = (str) => {
