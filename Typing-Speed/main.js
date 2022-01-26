@@ -21,7 +21,7 @@ const endTest = () => {
     let totalStr = typedWords.value;
     let wordCount = wordCounter(totalStr);
     let speed = Math.round((wordCount / totalTime) * 60);
-    let displaymsg = "Your typing speed is " + speed + "words per minute.";
+    let displaymsg = "Your typing speed is " + speed + " words per minute.";
     displaymsg += compare(message.innerText, totalStr);
     message.innerText = displaymsg;
     typedWords.value = '';
