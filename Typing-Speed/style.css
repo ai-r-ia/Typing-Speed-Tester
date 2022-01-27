@@ -18,6 +18,7 @@
     transform: translate(20%,20%);
     background: rgba(3, 10, 78, 0.534); 
     border-radius: 20px;
+    overflow: hidden;
 }
 
 .contents{
@@ -72,5 +73,4 @@ textarea{
     width: 100%;
     height: 100%;
     background: radial-gradient(#8cc7ff, rgb(42, 198, 219));
-    overflow: hidden;
 }
