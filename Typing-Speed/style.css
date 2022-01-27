@@ -37,7 +37,7 @@
     color: rgba(11, 250, 250, 0.89);
     text-shadow: 1px 2px  3px rgba(0, 0, 0, 0.959);
     font-size: 2.1rem;
-    /* background:rgb(83, 212, 248); */
+    text-size-adjust: 80%;
 }
 
 .contents h2{
