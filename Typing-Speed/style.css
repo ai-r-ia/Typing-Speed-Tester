@@ -74,3 +74,13 @@ textarea{
     height: 100%;
     background: radial-gradient(#8cc7ff, rgb(42, 198, 219));
 }
+
+@media only screen and (max-width: 600px) {
+    textarea{
+        width: 100%;
+    }
+    .contents h1{
+        text-size-adjust: 80%;
+    }
+
+}
