@@ -21,8 +21,13 @@ const endTest = () => {
     let totalStr = typedWords.value;
     let wordCount = wordCounter(totalStr);
     let speed = Math.round((wordCount / totalTime) * 60);
-    let displaymsg = "Your typing speed is " + speed + " words per minute.";
-    displaymsg += compare(message.innerText, totalStr);
+    let displaymsg = "Typing Speed: " + speed + " words per minute \n";
+    if (totalStr.length === 0) {
+        displaymsg = "You haven't typed anything :) "
+    }
+    else {
+        displaymsg += compare(message.innerText, totalStr);
+    }
     message.innerText = displaymsg;
     typedWords.value = '';
 }
@@ -41,7 +46,7 @@ const compare = (text1, text2) => {
         }
     })
     let errors = (words1.length - (nullCount + count));
-    return (" " + count + " words were correctly typed out of " + words1.length + " words and the total number of errors made are " + errors + ".");
+    return (" Correctly typed words: " + count + " of  " + words1.length + "\n  Errors: " + errors + "");
 }
 
 const wordCounter = (str) => {
